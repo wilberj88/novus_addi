@@ -1,6 +1,6 @@
 import streamlit as st
 import time
-
+from streamlit_extras.colored_header import colored_header
 
 colored_header(
     label="Central Contable",
