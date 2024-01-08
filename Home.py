@@ -87,7 +87,7 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):
-                    st.markdown('<p class="dashboard_title">Diagnóstico General Georreferenciado 🌎</p>', unsafe_allow_html = True)
+                    st.markdown('<p class="dashboard_title">Diagnóstico Georreferenciado 🌎</p>', unsafe_allow_html = True)
                     col1, col2, col3, col4 = st.columns(4)
                     col1.metric("Ingresos", "70%", "40%")
                     col2.metric("Gastos", "30%", "-82%")
@@ -101,8 +101,8 @@ with params_col:
                     st.pydeck_chart(pdk.Deck(
                     map_style=None,
                     initial_view_state=pdk.ViewState(
-                        latitude=4.26,
-                        longitude=-75.13,
+                        latitude=-1.9885100,
+                        longitude=43.31283,
                         zoom=11,
                         pitch=50,
                     ),
