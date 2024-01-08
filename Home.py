@@ -6,7 +6,7 @@ from lightweight_charts.widgets import StreamlitChart
 import random
 import numpy as np
 import pandas as pd
-import time as st
+import time as ts
 from datetime import time
 import plotly.graph_objects as go
 import pydeck as pdk
