@@ -123,7 +123,7 @@ with params_col:
                        
                     
             with data_col:
-                
+                st.header('Recomendaciones de acciòn YA')
                 df = pd.DataFrame(
                     {
                         "name": ["Contable", "Financiero", "Fiscal"],
