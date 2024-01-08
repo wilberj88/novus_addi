@@ -124,6 +124,10 @@ with params_col:
                     
             with data_col:
                 st.header('Recomendaciones de acciòn YA')
+                current_time = time.ctime()
+                st.write("In real time monitoring at: ", current_time)
+                st.write('EN TODA ESPAÑA')
+
                 col1, col2 = st.columns(2)
                 with col1:
                     st.subheader('Plan A')
