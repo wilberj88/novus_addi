@@ -105,12 +105,7 @@ with params_col:
                     st.plotly_chart(fig1, theme="streamlit")
                     
                     st.markdown('<p class="dashboard_title">🌎 Diagnóstico Georreferenciado 🔎</p>', unsafe_allow_html = True)
-                    col1, col2, col3, col4 = st.columns(4)
-                    col1.metric("Ingresos", "70%", "40%")
-                    col2.metric("Gastos", "30%", "-82%")
-                    col3.metric("Rentabilidad", "16%", "43%")
-                    col4.metric("Rotación Personal", "87%", "78%")
-                   
+                    
                     #datos
                     df = pd.DataFrame(
                     np.random.randn(500, 2) / [50, 50] + [-1.9868735, 43.3205582],
@@ -211,6 +206,12 @@ with params_col:
                     },
                     hide_index=True,
                 )
+                col1, col2, col3, col4 = st.columns(4)
+                    col1.metric("Ingresos", "70%", "40%")
+                    col2.metric("Gastos", "30%", "-82%")
+                    col3.metric("Rentabilidad", "16%", "43%")
+                    col4.metric("Rotación Personal", "87%", "78%")
+                   
                 st.caption("By Wilber Jimenez Hernandez")
                 
                
