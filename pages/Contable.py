@@ -2,6 +2,7 @@ import streamlit as st
 import time
 from streamlit_extras.colored_header import colored_header
 from streamlit_echarts import st_echarts
+from streamlit_extras.grid import grid
 
 st.header('Central Contable')
 st.subheader('Configuración, Monitor, Alarmas y Recomendaciones')
