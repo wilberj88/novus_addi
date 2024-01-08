@@ -8,6 +8,7 @@ import pandas as pd
 import time
 from datetime import time
 import plotly.graph_objects as go
+import pydeck as pdk
 
 
 if "symbols_list" not in st.session_state:
@@ -85,6 +86,46 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):
+                    st.header("Diagnóstico de Riesgos Climáticos + Transición Energética")
+                    st.write("Probabilidades de ocurrencia en el periodo ", categoria)
+                    col1, col2, col3, col4 = st.columns(4)
+                    col1.metric("Derrumbes", "70%", "40%")
+                    col2.metric("Sequías", "30%", "-82%")
+                    col3.metric("Incedios", "16%", "43%")
+                    col4.metric("Inundaciones", "87%", "78%")
+                    st.write("Georreferenciación de riesgos climáticos")
+                    #datos
+                    df = pd.DataFrame(
+                    np.random.randn(1000, 2) / [50, 50] + [4.2620, -75.13],
+                    columns=['lat', 'lon'])
+                    st.pydeck_chart(pdk.Deck(
+                    map_style=None,
+                    initial_view_state=pdk.ViewState(
+                        latitude=4.26,
+                        longitude=-75.13,
+                        zoom=11,
+                        pitch=50,
+                    ),
+                    layers=[
+                        pdk.Layer(
+                           'HexagonLayer',
+                           data=df,
+                           get_position='[lon, lat]',
+                           radius=200,
+                           elevation_scale=4,
+                           elevation_range=[0, 1000],
+                           pickable=True,
+                           extruded=True,
+                        ),
+                        pdk.Layer(
+                            'ScatterplotLayer',
+                            data=df,
+                            get_position='[lon, lat]',
+                            get_color='[200, 30, 0, 160]',
+                            get_radius=200,
+                        ),
+                        ],
+                        ))
                     fig1 = go.Figure(data=[go.Sankey(
                         node = dict(
                             pad = 15,
