@@ -87,6 +87,23 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):
+                    fig1 = go.Figure(data=[go.Sankey(
+                            node = dict(
+                                pad = 15,
+                                thickness = 20,
+                                line = dict(color = "black", width = 0.5),
+                                label = ["Gastos Mensuales", "Necesidades", "Entretenimiento", "Inversiones", "Vivienda", "Estudio", "Alimentación", "Transporte", "Entretenimiento", "Viajes", "Acciones", "Activos", "Criptomonedas", "Bonos"],
+                                color = "red"
+                                ),
+                            link = dict(
+                            source = [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3], # indices correspond to labels, eg A1, A2, A1, B1, ...
+                            target = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                            value = [50, 20, 30, 10, 20, 10, 22, 22, 10, 14, 10, 10, 10]
+                            ))])
+                        
+                    fig1.update_layout(title_text="Usos promedio de tu presupuesto💰", font_size=5)
+                    st.plotly_chart(fig1, theme="streamlit")
+                    
                     st.markdown('<p class="dashboard_title">🌎 Diagnóstico Georreferenciado 🔎</p>', unsafe_allow_html = True)
                     col1, col2, col3, col4 = st.columns(4)
                     col1.metric("Ingresos", "70%", "40%")
@@ -130,22 +147,7 @@ with params_col:
                        
                     
             with data_col:
-                fig1 = go.Figure(data=[go.Sankey(
-                        node = dict(
-                            pad = 7,
-                            thickness = 10,
-                            line = dict(color = "black", width = 0.5),
-                            label = ["Gastos Mensuales", "Necesidades", "Entretenimiento", "Inversiones", "Vivienda", "Estudio", "Alimentación", "Transporte", "Entretenimiento", "Viajes", "Acciones", "Activos", "Criptomonedas", "Bonos"],
-                            color = "red"
-                            ),
-                        link = dict(
-                        source = [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3], # indices correspond to labels, eg A1, A2, A1, B1, ...
-                        target = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
-                        value = [50, 20, 30, 10, 20, 10, 22, 22, 10, 14, 10, 10, 10]
-                        ))])
-                    
-                fig1.update_layout(title_text="Usos promedio de tu presupuesto💰", font_size=5)
-                st.plotly_chart(fig1, theme="streamlit")
+                
                 df = pd.DataFrame(
                     {
                         "name": ["Roadmap", "Extras", "Issues"],
