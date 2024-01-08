@@ -125,10 +125,10 @@ with params_col:
             with data_col:
                 st.header('Recomendaciones de acciòn YA')
                 col1, col2 = st.columns(2)
-                    with col1:
-                        st.write('Plan A')
-                    with col2:
-                        st.write('Plan B')
+                with col1:
+                    st.write('Plan A')
+                with col2:
+                    st.write('Plan B')
                 df = pd.DataFrame(
                     {
                         "name": ["Contable", "Financiero", "Fiscal"],
