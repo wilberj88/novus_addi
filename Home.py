@@ -110,37 +110,11 @@ with params_col:
 
                                         
                     my_grid2 = grid(3, vertical_align="bottom")
-                    my_grid2.button("Actualizar Ubicación Clientes", use_container_width=True)
-                    my_grid2.button("Actualizar Ubicación Proveedores", use_container_width=True)
-                    my_grid2.button("Actualizar Ubicación Deudores", use_container_width=True)
-                    
-                    
-                    # center on Liberty Bell, add marker
-                    m = folium.Map(location=[10.4735, -73.2486], zoom_start=13)
-                    n = folium.Map(location=[10.45358, -73.26678], zoom_start=13)
-                    l = folium.Map(location=[10.44664, -73.30750], zoom_start=13)
-                    
-                    #zona1
-                    folium.Marker(
-                        [10.47358, -73.248639], popup="Z1 PV1 PV1 COL Nacional Loperena 3de10K", tooltip="Z1 PV1 PV1 COL Nacional Loperena. 3K de 8K", icon=folium.Icon(icon='cloud')
-                    ).add_to(m)
-                    folium.Marker(
-                        [10.474139, -73.25125], popup="Z1 PV2 PV2 ESC Bellas Artes. 2K de 5K", tooltip="Z2 PV2 PV2 ESC Bellas Artes. 2K de 5K", icon=folium.Icon(icon='cloud')
-                    ).add_to(m)
-                    folium.Marker(
-                        [10.478472, -73.245361], popup="Z1 PV3 PV3 UDES. 1,5K de 4K", tooltip="Z1 PV3 PV3 UDES. 1,5K de 4K", icon=folium.Icon(icon='cloud')
-                    ).add_to(m)
-                    folium.Marker(
-                        [10.468500, -73.247278], popup="Z1 PV4 PV4 COL Prudencia Daza. 1K de 3K", tooltip="Z1 PV4 PV4 COL Prudencia Daza. 1K de 3K", icon=folium.Icon(icon='cloud')
-                    ).add_to(m)
-                    folium.Marker(
-                        [10.469667, -73.238056], popup="Z1 PV5 PV5 COL SantoDomingo. 2,5K de 6K", tooltip="Z1 PV5 PV5 COL SantoDomingo. 2,5K de 6K", icon=folium.Icon(icon='cloud')
-                    ).add_to(m)
-            
+                    my_grid2.button("Ranking Mejores Clientes", use_container_width=True)
+                    my_grid2.button("Ranking Mejores Proveedores", use_container_width=True)
+                    my_grid2.button("Ranking Peores Deudores", use_container_width=True)
 
-
-                    
-                    st.markdown('<p class="dashboard_title">🌎 Diagnóstico Georreferenciado 🔎</p>', unsafe_allow_html = True)
+                    st.markdown('<p class="dashboard_title">🌎 🔎</p>', unsafe_allow_html = True)
                     
                     #datos
                     df = pd.DataFrame(
