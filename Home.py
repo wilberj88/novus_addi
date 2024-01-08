@@ -96,14 +96,14 @@ with params_col:
                    
                     #datos
                     df = pd.DataFrame(
-                    np.random.randn(100, 2) / [50, 50] + [-1.97499, 43.31283],
+                    np.random.randn(500, 2) / [50, 50] + [-1.97499, 43.31283],
                     columns=['lat', 'lon'])
                     st.pydeck_chart(pdk.Deck(
                     map_style=None,
                     initial_view_state=pdk.ViewState(
                         latitude=-1.97499,
                         longitude=43.31283,
-                        zoom=5,
+                        zoom=11,
                         pitch=50,
                     ),
                     layers=[
@@ -113,7 +113,7 @@ with params_col:
                            get_position='[lon, lat]',
                            radius=200,
                            elevation_scale=4,
-                           elevation_range=[0, 1000],
+                           elevation_range=[0, 2000],
                            pickable=True,
                            extruded=True,
                         ),
