@@ -3,6 +3,7 @@ import time
 from streamlit_extras.colored_header import colored_header
 from streamlit_echarts import st_echarts
 from streamlit_extras.grid import grid
+import plotly.graph_objects as go
 
 st.header('Central Contable')
 st.subheader('Configuración, Monitor, Alarmas y Recomendaciones')
