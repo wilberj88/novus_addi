@@ -175,7 +175,7 @@ with col7:
 
     
 colored_header(
-    label="Cronograma Paradas de Planta Próxima Semana",
+    label="Cronograma de Asesoría anual 2024",
     description="Horarios y Resultados Requeridos",
     color_name="violet-70",
 )
@@ -517,15 +517,4 @@ if a and b and c:
        fig1.update_layout(title_text="Participación Energética en Calderas", font_size=10)
        st.plotly_chart(fig1, theme="streamlit")
         
-colored_header(
-    label="Alarma",
-    description="Por servicio, tipo de compañía y presupuesto",
-    color_name="violet-70",
-)
-
-colored_header(
-    label="Recomendaciones",
-    description="Por servicio, tipo de compañía y presupuesto",
-    color_name="violet-70",
-)
 
