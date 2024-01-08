@@ -86,14 +86,13 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):
-                    st.header("Diagnóstico de Riesgos Climáticos + Transición Energética")
-                    st.write("Probabilidades de ocurrencia en el periodo ", categoria)
+                    st.markdown('<p class="dashboard_title">Diagnóstico General Georreferenciado 🌎</p>', unsafe_allow_html = True)
                     col1, col2, col3, col4 = st.columns(4)
-                    col1.metric("Derrumbes", "70%", "40%")
-                    col2.metric("Sequías", "30%", "-82%")
-                    col3.metric("Incedios", "16%", "43%")
-                    col4.metric("Inundaciones", "87%", "78%")
-                    st.write("Georreferenciación de riesgos climáticos")
+                    col1.metric("Ingresos", "70%", "40%")
+                    col2.metric("Gastos", "30%", "-82%")
+                    col3.metric("Rentabilidad", "16%", "43%")
+                    col4.metric("Rotación Personal", "87%", "78%")
+                   
                     #datos
                     df = pd.DataFrame(
                     np.random.randn(1000, 2) / [50, 50] + [4.2620, -75.13],
