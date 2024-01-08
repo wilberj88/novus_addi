@@ -15,7 +15,7 @@ if "symbols_list" not in st.session_state:
     
 st.set_page_config(
     layout = 'wide',
-    page_title = 'Mis Finanzas 2024'
+    page_title = 'Novus_Addi'
 )
 
 st.markdown(
@@ -34,31 +34,31 @@ with open('style.css') as f:
 title_col, emp_col, btc_col, eth_col, xmr_col, sol_col, xrp_col = st.columns([1.3,0.2,1,1,1,1,1])
 
 with title_col:
-    st.markdown('<p class="dashboard_title">Mis Finanzas 2024<br>Dashboard</p>', unsafe_allow_html = True)
+    st.markdown('<p class="dashboard_title">Novus Mando<br>Addi Consulting</p>', unsafe_allow_html = True)
 
 with btc_col:
     with st.container(border=True):
-        st.markdown(f'<p class="btc_text">Ingresos<br></p><p class="price_details">34060.92</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="btc_text">Hostelería<br></p><p class="price_details">29.4%</p>', unsafe_allow_html = True)
        
 with eth_col:
     with st.container(border=True):
         #eth_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=ETH/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="eth_text">Gastos<br></p><p class="price_details">1789.26</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="eth_text">Servicios<br></p><p class="price_details">22.1%</p>', unsafe_allow_html = True)
 
 with xmr_col:
     with st.container(border=True):
         #xmr_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XMR/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="xmr_text">Inversiones<br></p><p class="price_details">162.1</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="xmr_text">Comercio<br></p><p class="price_details">19.1%</p>', unsafe_allow_html = True)
 
 with sol_col:
     with st.container(border=True):
         #sol_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=SOL/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="sol_text">Ahorros<br></p><p class="price_details">32.27</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="sol_text">Producción Audiovisual<br></p><p class="price_details">14.7%</p>', unsafe_allow_html = True)
 
 with xrp_col:
     with st.container(border=True):
         #xrp_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XRP/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="xrp_text">Deudas<br></p><p class="price_details">0.5449</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="xrp_text">Otros<br></p><p class="price_details">14.7%</p>', unsafe_allow_html = True)
 
 
 params_col, chart_col, data_col = st.columns([0.7,1.6,1.1])
