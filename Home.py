@@ -87,7 +87,7 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):
-                    st.markdown('<p class="dashboard_title">Diagnóstico Georreferenciado 🌎</p>', unsafe_allow_html = True)
+                    st.markdown('<p class="dashboard_title">🌎 Diagnóstico Georreferenciado 🔎</p>', unsafe_allow_html = True)
                     col1, col2, col3, col4 = st.columns(4)
                     col1.metric("Ingresos", "70%", "40%")
                     col2.metric("Gastos", "30%", "-82%")
@@ -126,7 +126,11 @@ with params_col:
                         ),
                         ],
                         ))
-                    fig1 = go.Figure(data=[go.Sankey(
+                    
+                       
+                    
+            with data_col:
+                fig1 = go.Figure(data=[go.Sankey(
                         node = dict(
                             pad = 15,
                             thickness = 20,
@@ -166,9 +170,6 @@ with params_col:
                         },
                         hide_index=True,
                     )
-                       
-                    
-            with data_col:
                 data_df = pd.DataFrame(
                     {
                         "name": ["Mando", "Atento", "Campus"],
