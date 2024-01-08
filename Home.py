@@ -96,7 +96,7 @@ with params_col:
                    
                     #datos
                     df = pd.DataFrame(
-                    np.random.randn(1000, 2) / [50, 50] + [4.2620, -75.13],
+                    np.random.randn(1000, 2) / [50, 50] + [-1.9885100, 43.31283],
                     columns=['lat', 'lon'])
                     st.pydeck_chart(pdk.Deck(
                     map_style=None,
