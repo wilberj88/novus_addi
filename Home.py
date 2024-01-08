@@ -69,15 +69,13 @@ with params_col:
         
         st.markdown(f'<p class="params_text">PARÁMETROS', unsafe_allow_html = True)
                 
-        listado_modos = ['Conservador', 'Precavido', 'Arriesgado']
-        modo = st.selectbox('Selecciona un modo financiero', listado_modos, key = 'modo')
-
-        listado_edad_retiro = ['50 años','55 años','60 años','65 años','70 años']
-        retiro = st.selectbox('¿A qué edad deseas pensionarte?', listado_edad_retiro, key = 'retiro')
+        tipo_empresa = st.selectbox("Selecciona tipo de empresa:", ("S.L.", "S.A.", "S.L.L.", "Holding", "Comunidades de bienes", "Cooperativas", "Asociaciones", "Autónomos", "Emprendedores", "Particulares"), index=None, placeholder="Choose an option")
         
-        estilo_de_vida_retiro = st.selectbox('Estilo de vida', ['Popular', 'Clase Media', 'Clase Media Alta', 'Clase Alta'], key = 'interval_selectbox')
-        ahorro = st.number_input('Meta Ahorros USD millones', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
-        a = st.slider("Indica cuánto en promedio ganas al mes en dólares", 0, 10000, 500)
+        servicios_contables_internacionales = st.selectbox("Selecciona tipo de servicio contable internacional:", ("Reporting", "Estados Financieros", "Informes Casa Matriz", "Auditorías de Control Interno"), index=None, placeholder="Choose an option")
+        
+        servicios_contables_outsourcing_gerencial = st.selectbox("Selecciona tipo de servicio contable outsourging gerencial necesitas:", ("Asistencia a Justa de Socios", "Análisis de Estados Financieros", "Atención Entidades Bancarias", "Estrategia Corporativa"), index=None, placeholder="Choose an option")
+
+        a = st.slider("Indica nivel mínimo de facturación anual", 0, 100000, 5000)
         st.divider()
         update_chart = st.form_submit_button('Update chart')
         
