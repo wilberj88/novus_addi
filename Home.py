@@ -4,6 +4,7 @@ from streamlit_echarts import st_echarts
 import pandas as pd
 from lightweight_charts.widgets import StreamlitChart
 import random
+import numpy as np
 import pandas as pd
 import time
 from datetime import time
