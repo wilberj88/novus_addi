@@ -181,7 +181,7 @@ with params_col:
                 
                 df = pd.DataFrame(
                     {
-                        "name": ["Roadmap", "Extras", "Issues"],
+                        "name": ["Contable", "Financiero", "Fiscal"],
                         "url": ["https://roadmap.streamlit.app", "https://extras.streamlit.app", "https://issues.streamlit.app"],
                         "stars": [random.randint(0, 1000) for _ in range(3)],
                         "views_history": [[random.randint(0, 5000) for _ in range(30)] for _ in range(3)],
