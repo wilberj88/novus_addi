@@ -3,7 +3,7 @@ import time
 from streamlit_extras.colored_header import colored_header
 
 st.header('Central Contable')
-st.subheadr('Configuración, Monitor, Alarmas y Recomendaciones')
+st.subheader('Configuración, Monitor, Alarmas y Recomendaciones')
 current_time = time.ctime()
 st.write("Siendo HOY y AHORA las: ", current_time)
 
