@@ -123,7 +123,7 @@ with params_col:
                     
             with data_col:
                 st.header('Recomendaciones de acciòn YA')
-                current_time = time.ctime()
+                current_time = ts.ctime()
                 st.write("In real time monitoring at: ", current_time)
                 st.write('EN TODA ESPAÑA')
 
