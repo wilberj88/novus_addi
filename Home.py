@@ -126,9 +126,11 @@ with params_col:
                 st.header('Recomendaciones de acciòn YA')
                 col1, col2 = st.columns(2)
                 with col1:
-                    st.write('Plan A')
+                    st.subheader('Plan A')
+                    st.write('Decir en Galicia que con este clima es mejor vivir asegurado')
                 with col2:
-                    st.write('Plan B')
+                    st.subheader('Plan B')
+                    st.write('Decir en Galicia que con este clima es mejor vivir con abogado')
                 df = pd.DataFrame(
                     {
                         "name": ["Contable", "Financiero", "Fiscal"],
