@@ -164,22 +164,22 @@ with params_col:
                 st.dataframe(
                     df,
                     column_config={
-                        "name": "App name",
+                        "name": "Servicios",
                         "stars": st.column_config.NumberColumn(
                             "Github Stars",
                             help="Number of stars on GitHub",
                             format="%d ⭐",
                         ),
-                        "url": st.column_config.LinkColumn("App URL"),
+                        "url": st.column_config.LinkColumn("Link App URL"),
                         "views_history": st.column_config.LineChartColumn(
-                            "Views (past 30 days)", y_min=0, y_max=5000
+                            "Ventas (past 30 days)", y_min=0, y_max=5000
                         ),
                     },
                     hide_index=True,
                 )
                 data_df = pd.DataFrame(
                     {
-                        "name": ["Mando", "Atento", "Campus"],
+                        "name": ["Laboral", "Legal", "Mercantil"],
                         "apps": [
                             "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/5435b8cb-6c6c-490b-9608-799b543655d3/Home_Page.png",
                             "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/ef9a7627-13f2-47e5-8f65-3f69bb38a5c2/Home_Page.png",
@@ -196,12 +196,12 @@ with params_col:
                 st.dataframe(
                     data_df,
                     column_config={
-                        "name": "Tech Required",
+                        "name": "Suscripciones",
                         "apps": st.column_config.ImageColumn(
-                            "Preview Image", help="Streamlit app preview screenshots"
+                            "Web por Servicio", help="Streamlit app preview screenshots"
                         ),
                         "sales": st.column_config.BarChartColumn(
-                            "Sales (last 6 months)",
+                            "Ventas (last 6 months)",
                             help="The sales volume in the last 6 months",
                             y_min=0,
                             y_max=100,
