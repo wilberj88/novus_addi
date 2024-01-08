@@ -2,6 +2,15 @@ import streamlit as st
 import time
 
 
+colored_header(
+    label="Central Contable",
+    description="Configuración, Monitor, Alarmas y Recomendaciones",
+    color_name="violet-70",
+)
+current_time = time.ctime()
+st.write("Siendo HOY y AHORA las: ", current_time)
+
+
 tipo_empresa = st.selectbox("Selecciona qué tipo de empresa eres:", ("S.L.", "S.A.", "S.L.L.", "Holding", "Comunidades de bienes", "Cooperativas", "Asociaciones", "Autónomos", "Emprendedores", "Particulares"), index=None, placeholder="Choose an option")
 
 
