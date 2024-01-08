@@ -132,8 +132,8 @@ with params_col:
             with data_col:
                 fig1 = go.Figure(data=[go.Sankey(
                         node = dict(
-                            pad = 15,
-                            thickness = 20,
+                            pad = 7,
+                            thickness = 10,
                             line = dict(color = "black", width = 0.5),
                             label = ["Gastos Mensuales", "Necesidades", "Entretenimiento", "Inversiones", "Vivienda", "Estudio", "Alimentación", "Transporte", "Entretenimiento", "Viajes", "Acciones", "Activos", "Criptomonedas", "Bonos"],
                             color = "red"
@@ -144,7 +144,7 @@ with params_col:
                         value = [50, 20, 30, 10, 20, 10, 22, 22, 10, 14, 10, 10, 10]
                         ))])
                     
-                fig1.update_layout(title_text="Usos promedio de tu presupuesto💰", font_size=10)
+                fig1.update_layout(title_text="Usos promedio de tu presupuesto💰", font_size=5)
                 st.plotly_chart(fig1, theme="streamlit")
                 df = pd.DataFrame(
                     {
