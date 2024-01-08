@@ -1,6 +1,7 @@
 import streamlit as st
 import time
 from streamlit_extras.colored_header import colored_header
+from streamlit_echarts import st_echarts
 
 st.header('Central Contable')
 st.subheader('Configuración, Monitor, Alarmas y Recomendaciones')
