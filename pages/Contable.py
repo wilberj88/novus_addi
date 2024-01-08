@@ -10,6 +10,7 @@ colored_header(
 current_time = time.ctime()
 st.write("Siendo HOY y AHORA las: ", current_time)
 
+st.header('Configuración')
 
 tipo_empresa = st.selectbox("Selecciona qué tipo de empresa eres:", ("S.L.", "S.A.", "S.L.L.", "Holding", "Comunidades de bienes", "Cooperativas", "Asociaciones", "Autónomos", "Emprendedores", "Particulares"), index=None, placeholder="Choose an option")
 
