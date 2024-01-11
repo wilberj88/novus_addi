@@ -158,6 +158,9 @@ with params_col:
                     },
                     hide_index=True,
                 )
+                st.button('PREDICCIÓN DE DESEMPEÑO EN ENGAGEMENT')
+                st.write('Plan A: 5%; Plan B: 4,5%')
+                
                 data_df = pd.DataFrame(
                     {
                         "name": ["Laboral", "Legal", "Mercantil"],
