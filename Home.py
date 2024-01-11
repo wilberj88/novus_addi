@@ -158,55 +158,56 @@ with params_col:
                     },
                     hide_index=True,
                 )
-                st.button('PREDICCIÓN DE DESEMPEÑO EN ENGAGEMENT')
-                st.write('Plan A: 5%; Plan B: 4,5%')
+                a = st.button('PREDICCIÓN DE DESEMPEÑO EN ENGAGEMENT')
+                if a:
+                    st.write('Plan A: 5%; Plan B: 4,5%')
                 
-                data_df = pd.DataFrame(
-                    {
-                        "name": ["Laboral", "Legal", "Mercantil"],
-                        "apps": [
-                            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/5435b8cb-6c6c-490b-9608-799b543655d3/Home_Page.png",
-                            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/ef9a7627-13f2-47e5-8f65-3f69bb38a5c2/Home_Page.png",
-                            "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/31b99099-8eae-4ff8-aa89-042895ed3843/Home_Page.png",
-                        ],
-                        "sales": [
-                            [0, 4, 26, 80, 100, 40],
-                            [80, 20, 80, 35, 40, 100],
-                            [10, 20, 80, 80, 70, 0],
-                        ],
-                        "Performance": [200, 550, 1000],
-                    }
-                )                
-                st.dataframe(
-                    data_df,
-                    column_config={
-                        "name": "Suscripciones",
-                        "apps": st.column_config.ImageColumn(
-                            "Web por Servicio", help="Streamlit app preview screenshots"
-                        ),
-                        "sales": st.column_config.BarChartColumn(
-                            "Ventas (last 6 months)",
-                            help="The sales volume in the last 6 months",
-                            y_min=0,
-                            y_max=100,
-                        ),
-                        "Performance": st.column_config.ProgressColumn(
-                            "Performance",
-                            help="The sales volume in USD",
-                            format="$%f",
-                            min_value=0,
-                            max_value=1000,
-                        ),
-                    },
-                    hide_index=True,
-                )
-                col1, col2, col3, col4 = st.columns(4)
-                col1.metric("Ingresos", "70%", "40%")
-                col2.metric("Gastos", "30%", "-82%")
-                col3.metric("Rentabilidad", "16%", "43%")
-                col4.metric("Rotación Personal", "87%", "78%")
-                   
-                st.caption("By Wilber Jimenez Hernandez")
+                    data_df = pd.DataFrame(
+                        {
+                            "name": ["Laboral", "Legal", "Mercantil"],
+                            "apps": [
+                                "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/5435b8cb-6c6c-490b-9608-799b543655d3/Home_Page.png",
+                                "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/ef9a7627-13f2-47e5-8f65-3f69bb38a5c2/Home_Page.png",
+                                "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/31b99099-8eae-4ff8-aa89-042895ed3843/Home_Page.png",
+                            ],
+                            "sales": [
+                                [0, 4, 26, 80, 100, 40],
+                                [80, 20, 80, 35, 40, 100],
+                                [10, 20, 80, 80, 70, 0],
+                            ],
+                            "Performance": [200, 550, 1000],
+                        }
+                    )                
+                    st.dataframe(
+                        data_df,
+                        column_config={
+                            "name": "Suscripciones",
+                            "apps": st.column_config.ImageColumn(
+                                "Web por Servicio", help="Streamlit app preview screenshots"
+                            ),
+                            "sales": st.column_config.BarChartColumn(
+                                "Ventas (last 6 months)",
+                                help="The sales volume in the last 6 months",
+                                y_min=0,
+                                y_max=100,
+                            ),
+                            "Performance": st.column_config.ProgressColumn(
+                                "Performance",
+                                help="The sales volume in USD",
+                                format="$%f",
+                                min_value=0,
+                                max_value=1000,
+                            ),
+                        },
+                        hide_index=True,
+                    )
+                    col1, col2, col3, col4 = st.columns(4)
+                    col1.metric("Ingresos", "70%", "40%")
+                    col2.metric("Gastos", "30%", "-82%")
+                    col3.metric("Rentabilidad", "16%", "43%")
+                    col4.metric("Rotación Personal", "87%", "78%")
+                       
+                    st.caption("By Wilber Jimenez Hernandez")
                 
                
 
